@@ -1,0 +1,5 @@
+# SortingAndSearchingAlgorithms
+target/*
+lib/*
+.idea
+.DS_Store
