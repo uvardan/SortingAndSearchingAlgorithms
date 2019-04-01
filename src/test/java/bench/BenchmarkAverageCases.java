@@ -29,6 +29,7 @@ public class BenchmarkAverageCases {
 
    @Param({
          "testCases/Generic_Sort_BestCase_100.txt",
+         "testCases/Generic_Sort_BestCase_1000.txt",
    })
    public String fileName;
 
@@ -41,5 +42,17 @@ public class BenchmarkAverageCases {
    public void BubbleSort()
    {
       BubbleSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void InsertionSort()
+   {
+      InsertionSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void ShellSort()
+   {
+      ShellSort.sortArray(inputArray);
    }
 }

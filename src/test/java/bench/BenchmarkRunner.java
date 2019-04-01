@@ -14,6 +14,7 @@ public class BenchmarkRunner {
                 .include(BenchmarkRandomCases.class.getSimpleName())
                 .include(BenchmarkBestCases.class.getSimpleName())
                 .include(BenchmarkWorstCases.class.getSimpleName())
+                .include(BenchmarkAverageCases.class.getSimpleName())
                 .timeout(TimeValue.minutes(1))
                 .warmupIterations(3) // Default is 5
                 .warmupTime(TimeValue.seconds(5)) // Default is 10
