@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
-public class BenchmarkAllCases {
+public class BenchmarkAllSortTestCases {
 
    private static int[] inputArray;
 
@@ -35,7 +35,7 @@ public class BenchmarkAllCases {
    @Setup
    public void loadData()
    {
-      // Read data into array. Not part of the benchmark.
+
       inputArray = SharedFunctions.readFromInputFile(fileName);
    }
 
