@@ -39,10 +39,11 @@ public class InsertionSort
          int key = arr[i];
          // insert arr[j] into the sorted sequence arr[0 .. j - 1]
          int j = i - 1;
-         while (j >= 0 && arr[j] > key) {
+         while (j >= leftIndex && arr[j] > key) {
             arr[j + 1] = arr[j];
-            j = j - 1;
+            j--;
          }
+
          arr[j + 1] = key;
       }
    }
@@ -50,7 +51,7 @@ public class InsertionSort
    @Test public void checkSortCorrectness()
    {
       final int kSize = 100;
-      int[] arr = SharedFunctions.getRandomArray(kSize);
+      int[] arr = SharedFunctions.getRandomArray(kSize, -100, 100);
 
       int[] originalArrCopy = new int[arr.length];
 
@@ -70,7 +71,7 @@ public class InsertionSort
       for (int i = 0; i < 100; ++i)
       {
          final int kSize = 100;
-         int[] arr = SharedFunctions.getRandomArray(kSize);
+         int[] arr = SharedFunctions.getRandomArray(kSize, -100, 100);
 
          int[] originalArrCopy = new int[arr.length];
 
@@ -94,6 +95,16 @@ public class InsertionSort
       sortArray(arr);
       assertArrayEquals(new int[]{}, arr);
 
+   }
+
+   @Test public void TestSortArrayInRange()
+   {
+      int[] arr = new int[] {3, 5, 2, 6, 8, 1, 4, 6};
+      final int kLeftIndex = 2;
+      final int kRightIndex = 5;
+      sortArrayInRange(arr, kLeftIndex, kRightIndex);
+      //SharedFunctions.printArrayToConsole(arr);
+      assertArrayEquals(new int[]{3, 5, 1, 2, 6, 8, 4, 6}, arr);
    }
 }
 

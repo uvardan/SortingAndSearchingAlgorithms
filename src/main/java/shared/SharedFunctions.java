@@ -165,13 +165,13 @@ public class SharedFunctions
       return r.nextInt((max - min) + 1) + min;
    }
 
-   public static int[] getRandomArray(int size)
+   public static int[] getRandomArray(int size, int lowerRange, int upperRange)
    {
       int[] arr = new int[size];
 
       for (int i = 0; i < arr.length; ++i)
       {
-         arr[i] = SharedFunctions.getRandomNumberInRange(-100, 100);
+         arr[i] = SharedFunctions.getRandomNumberInRange(lowerRange, upperRange);
       }
 
       return arr;

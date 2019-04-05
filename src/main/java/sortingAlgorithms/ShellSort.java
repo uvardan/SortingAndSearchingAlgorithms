@@ -52,7 +52,7 @@ public class ShellSort
    public void checkSortCorrectness()
    {
       final int kSize = 10;
-      int[] arr = SharedFunctions.getRandomArray(kSize);
+      int[] arr = SharedFunctions.getRandomArray(kSize, -100, 100);
 
       int[] originalArrCopy = new int[arr.length];
 

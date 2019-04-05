@@ -77,12 +77,19 @@ public class TimSort
 
    @Test void checkMergeCorrectness()
    {
-      int[] arr1 = {1, 4, 7};
-      int[] arr2 = {3, 5, 6, 11};
+      // seems like both sub arrays need to be sorted, i.e. even arrays means each have needs to be sorted
+      // but for odd arrays depending on the odd element, it might not be sorted. I think to fix this we need
+      // to break if in a way to make sure things are sorted.
+
+      // each subarray needs to be sorted
+      int[] arr1 = {1, 3, 4, 9, 100, 102};
+      int[] arr2 = {1, 2, 5, 6, 20, 31, 101, 105, 107};
 
       int[] arr = new int[arr1.length + arr2.length];
+      System.arraycopy(arr1, 0, arr, 0, arr1.length);
+      System.arraycopy(arr2, 0, arr, arr1.length, arr2.length);
 
-      mergeSort(arr, 0, 0 + (arr.length/2), arr.length - 1);
+      mergeSort(arr, 0, arr1.length - 1, arr.length - 1);
 
       if (!SharedFunctions.checkIfArrayIsSorted(arr))
       {
@@ -127,7 +134,7 @@ public class TimSort
    public void checkSortCorrectness()
    {
       final int kSize = 10;
-      int[] arr = SharedFunctions.getRandomArray(kSize);
+      int[] arr = SharedFunctions.getRandomArray(kSize, -100, 100);
 
       int[] originalArrCopy = new int[arr.length];
 
@@ -141,14 +148,13 @@ public class TimSort
       assertTrue(SharedFunctions.checksort(originalArrCopy, arr));
    }
 
-   // TODO: figure out why it does not handle if array size is not multiples of 32.
    @Test public void checkSortCorrectnessComprehensive()
    {
       // Test multiple random inputs
       for (int i = 0; i < 100; ++i)
       {
          final int kSize = 64;
-         int[] arr = SharedFunctions.getRandomArray(kSize);
+         int[] arr = SharedFunctions.getRandomArray(kSize, -100, 100);
 
          int[] originalArrCopy = new int[arr.length];
 
