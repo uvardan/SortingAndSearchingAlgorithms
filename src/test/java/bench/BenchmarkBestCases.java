@@ -33,7 +33,9 @@ public class BenchmarkBestCases {
     public String fileName;
 
     @Setup
-    public void loadData() {
+    public void loadData()
+    {
+
         inputArray = SharedFunctions.readFromInputFile(fileName);
     }
 
@@ -41,5 +43,17 @@ public class BenchmarkBestCases {
     public void BubbleSort()
     {
         BubbleSort.sortArray(inputArray);
+    }
+
+    @Benchmark
+    public void InsertionSort()
+    {
+        InsertionSort.sortArray(inputArray);
+    }
+
+    @Benchmark
+    public void ShellSort()
+    {
+        ShellSort.sortArray(inputArray);
     }
 }

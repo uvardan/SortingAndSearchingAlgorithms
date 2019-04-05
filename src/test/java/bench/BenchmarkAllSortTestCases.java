@@ -9,32 +9,33 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
-public class BenchmarkAverageCases {
+public class BenchmarkAllSortTestCases {
 
    private static int[] inputArray;
 
    //TODO: add test cases files
-   /*
-   @Param({
-         "testCases/Generic_Sort_AverageCase_10.txt",
-         "testCases/Generic_Sort_AverageCase_100.txt",
-         "testCases/Generic_Sort_AverageCase_1000.txt",
-         "testCases/Generic_Sort_AverageCase_10000.txt",
-         "testCases/Generic_Sort_AverageCase_100000.txt",
-         "testCases/Generic_Sort_AverageCase_1000000.txt",
-         "testCases/Generic_Sort_AverageCase_10000000.txt"
-   })
-   public String fileName;
-   */
+    /*
+    @Param({
+            "testCases/Generic_Sort_BestCase_10.txt",
+            "testCases/Generic_Sort_BestCase_100.txt",
+            "testCases/Generic_Sort_BestCase_1000.txt",
+            "testCases/Generic_Sort_BestCase_10000.txt",
+            "testCases/Generic_Sort_BestCase_100000.txt",
+            "testCases/Generic_Sort_BestCase_1000000.txt",
+            "testCases/Generic_Sort_BestCase_10000000.txt"
+    })
+    public String fileName;
+    */
 
    @Param({
          "testCases/Generic_Sort_BestCase_100.txt",
-         "testCases/Generic_Sort_BestCase_1000.txt",
    })
    public String fileName;
 
    @Setup
-   public void loadData() {
+   public void loadData()
+   {
+
       inputArray = SharedFunctions.readFromInputFile(fileName);
    }
 
@@ -52,6 +53,12 @@ public class BenchmarkAverageCases {
 
    @Benchmark
    public void ShellSort()
+   {
+      ShellSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void TimSort()
    {
       ShellSort.sortArray(inputArray);
    }

@@ -11,7 +11,12 @@ import java.util.stream.Stream;
 
 public class SharedFunctions
 {
-   public static String printArray(int arr[])
+   public static void printArrayToConsole(int arr[])
+   {
+      System.out.println(arrayToString(arr));
+   }
+
+   public static String arrayToString(int arr[])
    {
       StringBuilder sb = new StringBuilder();
 
@@ -74,6 +79,19 @@ public class SharedFunctions
          if (e == x) count++;
       }
       return count;
+   }
+
+   public static boolean checkIfArrayIsSorted(int[] arr)
+   {
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] > arr[i + 1])
+         {
+            return false;
+         }
+      }
+
+      return true;
    }
 
    public static int[] readFromInputFile(String fileName)
@@ -145,5 +163,17 @@ public class SharedFunctions
 
       Random r = new Random();
       return r.nextInt((max - min) + 1) + min;
+   }
+
+   public static int[] getRandomArray(int size, int lowerRange, int upperRange)
+   {
+      int[] arr = new int[size];
+
+      for (int i = 0; i < arr.length; ++i)
+      {
+         arr[i] = SharedFunctions.getRandomNumberInRange(lowerRange, upperRange);
+      }
+
+      return arr;
    }
 }

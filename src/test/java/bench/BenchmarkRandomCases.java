@@ -43,4 +43,16 @@ public class BenchmarkRandomCases {
     {
         BubbleSort.sortArray(inputArray);
     }
+
+    @Benchmark
+    public void InsertionSort()
+    {
+        InsertionSort.sortArray(inputArray);
+    }
+
+    @Benchmark
+    public void ShellSort()
+    {
+        ShellSort.sortArray(inputArray);
+    }
 }
