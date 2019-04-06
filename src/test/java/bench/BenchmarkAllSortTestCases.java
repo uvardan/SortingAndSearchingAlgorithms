@@ -13,22 +13,74 @@ public class BenchmarkAllSortTestCases {
 
    private static int[] inputArray;
 
-   //TODO: add test cases files
-    /*
-    @Param({
-            "testCases/Generic_Sort_BestCase_10.txt",
-            "testCases/Generic_Sort_BestCase_100.txt",
-            "testCases/Generic_Sort_BestCase_1000.txt",
-            "testCases/Generic_Sort_BestCase_10000.txt",
-            "testCases/Generic_Sort_BestCase_100000.txt",
-            "testCases/Generic_Sort_BestCase_1000000.txt",
-            "testCases/Generic_Sort_BestCase_10000000.txt"
-    })
-    public String fileName;
-    */
-
    @Param({
-         "testCases/Generic_Sort_BestCase_100.txt",
+         /*
+         "testCases/SortedInAscendingOrderCase_1.txt",
+         "testCases/SortedInDescendingOrderCase_1.txt",
+         "testCases/RandomOrderCase_1.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1.txt",
+         */
+         "testCases/SortedInAscendingOrderCase_10.txt",
+         "testCases/SortedInDescendingOrderCase_10.txt",
+         "testCases/RandomOrderCase_10.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_10.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_10.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_10.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10.txt",
+         /*
+         "testCases/SortedInAscendingOrderCase_100.txt",
+         "testCases/SortedInDescendingOrderCase_100.txt",
+         "testCases/RandomOrderCase_100.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_100.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_100.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_100.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100.txt",
+         "testCases/SortedInAscendingOrderCase_1000.txt",
+         "testCases/SortedInDescendingOrderCase_1000.txt",
+         "testCases/RandomOrderCase_1000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000.txt",
+         "testCases/SortedInAscendingOrderCase_10000.txt",
+         "testCases/SortedInDescendingOrderCase_10000.txt",
+         "testCases/RandomOrderCase_10000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_10000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_10000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000.txt",
+         "testCases/SortedInAscendingOrderCase_100000.txt",
+         "testCases/SortedInDescendingOrderCase_100000.txt",
+         "testCases/RandomOrderCase_100000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_100000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_100000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000.txt",
+         "testCases/SortedInAscendingOrderCase_1000000.txt",
+         "testCases/SortedInDescendingOrderCase_1000000.txt",
+         "testCases/RandomOrderCase_1000000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1000000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1000000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000000.txt",
+         "testCases/SortedInAscendingOrderCase_10000000.txt",
+         "testCases/SortedInDescendingOrderCase_10000000.txt",
+         "testCases/RandomOrderCase_10000000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_10000000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_10000000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000000.txt",
+         "testCases/SortedInAscendingOrderCase_100000000.txt",
+         "testCases/SortedInDescendingOrderCase_100000000.txt",
+         "testCases/RandomOrderCase_100000000.txt",
+         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_100000000.txt",
+         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_100000000.txt",
+         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000000.txt",
+         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000000.txt",
+         */
    })
    public String fileName;
 
