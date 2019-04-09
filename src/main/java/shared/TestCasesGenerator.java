@@ -216,7 +216,7 @@ class TestCasesGenerator
 
    public static void generateRandomOrderCase(int[] arr)
    {
-      final int kLowerRange = -1000000;
+      final int kLowerRange = 0;
       final int kUpperRange = 1000000;
       final int kSize = arr.length;
       arr = SharedFunctions.getRandomArray(kSize, kLowerRange, kUpperRange);
@@ -232,12 +232,12 @@ class TestCasesGenerator
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Put high numbers
-            arr[i] = SharedFunctions.getRandomNumberInRange(1000, 1000000);
+            arr[i] = SharedFunctions.getRandomNumberInRange(10000, 1000000);
          }
          else
          {
             // Upper half (i >= arr.length/2 ). Put low numbers
-            arr[i] = SharedFunctions.getRandomNumberInRange(-1000000, -1000);
+            arr[i] = SharedFunctions.getRandomNumberInRange(0, 1000);
          }
       }
    }
@@ -282,13 +282,13 @@ class TestCasesGenerator
       {
          if (i < kArrayHalfCutOff)
          {
-            // Lower half. Put high numbers
-            arr[i] = SharedFunctions.getRandomNumberInRange(-1000000, -1000);
+            // Lower half. Put low numbers
+            arr[i] = SharedFunctions.getRandomNumberInRange(0, 1000);
          }
          else
          {
-            // Upper half (i >= arr.length). Put low numbers
-            arr[i] = SharedFunctions.getRandomNumberInRange(1000, 1000000);
+            // Upper half (i >= arr.length). Put high numbers
+            arr[i] = SharedFunctions.getRandomNumberInRange(10000, 1000000);
          }
       }
    }
