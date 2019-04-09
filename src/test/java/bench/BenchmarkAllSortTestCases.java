@@ -14,20 +14,6 @@ public class BenchmarkAllSortTestCases {
    private static int[] inputArray;
 
    @Param({
-         "testCases/SortedInAscendingOrderCase_1.txt",
-         "testCases/SortedInDescendingOrderCase_1.txt",
-         "testCases/RandomOrderCase_1.txt",
-         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1.txt",
-         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1.txt",
-         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1.txt",
-         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1.txt",
-         "testCases/SortedInAscendingOrderCase_10.txt",
-         "testCases/SortedInDescendingOrderCase_10.txt",
-         "testCases/RandomOrderCase_10.txt",
-         "testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_10.txt",
-         "testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_10.txt",
-         "testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_10.txt",
-         "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10.txt",
          "testCases/SortedInAscendingOrderCase_100.txt",
          "testCases/SortedInDescendingOrderCase_100.txt",
          "testCases/RandomOrderCase_100.txt",
