@@ -110,4 +110,28 @@ public class BenchmarkAllSortTestCases {
    {
       ShellSort.sortArray(inputArray);
    }
+
+   @Benchmark
+   public void HeapSort()
+   {
+      ShellSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void MergeSort()
+   {
+      ShellSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void QuickSort()
+   {
+      ShellSort.sortArray(inputArray);
+   }
+
+   @Benchmark
+   public void RadixSort()
+   {
+      ShellSort.sortArray(inputArray);
+   }
 }
