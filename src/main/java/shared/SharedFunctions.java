@@ -1,5 +1,7 @@
 package shared;
 
+import org.junit.jupiter.api.Test;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.nio.file.Files;
@@ -8,6 +10,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SharedFunctions
 {
@@ -30,7 +34,7 @@ public class SharedFunctions
       {
          sb.append(arr[i]);
 
-         if(i != (size - 1))
+         if (i != (size - 1))
          {
             sb.append(", ");
          }
@@ -60,7 +64,7 @@ public class SharedFunctions
          }
       }
 
-      for (int e: pre)
+      for (int e : pre)
       {
          if (count(pre, e) != count(post, e))
          {
@@ -75,7 +79,8 @@ public class SharedFunctions
    {
       // returns the #occurrences of x in arr
       int count = 0;
-      for (int e: arr) {
+      for (int e : arr)
+      {
          if (e == x) count++;
       }
       return count;
@@ -111,8 +116,7 @@ public class SharedFunctions
             arr[lineIndex] = Integer.parseInt(fileLines.get(lineIndex));
          }
 
-      }
-      catch (Exception e)
+      } catch (Exception e)
       {
          System.out.println("Exception While Reading File: " + e.toString());
          System.exit(-1);
@@ -135,7 +139,7 @@ public class SharedFunctions
          {
             sb.append(arr[i]);
 
-            if(i != (size - 1))
+            if (i != (size - 1))
             {
                sb.append("\n");
             }
@@ -143,8 +147,7 @@ public class SharedFunctions
 
          writer.write(sb.toString());
          writer.close();
-      }
-      catch (Exception e)
+      } catch (Exception e)
       {
          System.out.println("Exception While Writing To File: " + e.toString());
          System.exit(-1);
@@ -155,7 +158,6 @@ public class SharedFunctions
    // Reference: https://www.mkyong.com/java/java-generate-random-integers-in-a-range/
    public static int getRandomNumberInRange(int min, int max)
    {
-
       if (min >= max)
       {
          throw new IllegalArgumentException("max must be greater than min");
@@ -175,5 +177,90 @@ public class SharedFunctions
       }
 
       return arr;
+   }
+
+   @Test
+   public void testRandomOrderCase()
+   {
+      final int kLowerRange = 0;
+      final int kUpperRange = 1000;
+      final int kSize = 100;
+
+      int[] arr = getRandomArray(kSize, kLowerRange, kUpperRange);
+
+      printArrayToConsole(arr);
+
+      // Make sure array is not in ascending or descending order and they are not the same
+      boolean numbersAreInAscendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] > arr[i + 1])
+         {
+            numbersAreInAscendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersAreInDescendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] < arr[i + 1])
+         {
+            numbersAreInDescendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersreTheSame = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] != arr[i + 1])
+         {
+            numbersreTheSame = false;
+            break;
+         }
+      }
+
+      assertTrue(!numbersAreInAscendingOrder && !numbersAreInDescendingOrder && !numbersreTheSame);
+   }
+
+   public static void swapRandomIndicesInArray(int[] arr, double percentageOfElements)
+   {
+      if (0 == arr.length)
+      {
+         throw new IllegalArgumentException("Array must not be empty!");
+      }
+
+      final int kNumberOfElementsToSwap = (int)((percentageOfElements/100) * arr.length);
+
+      for (int i = 0; i < kNumberOfElementsToSwap; ++i)
+      {
+         // Get random index in range
+         int firstIndex = getRandomNumberInRange(0, arr.length - 1);
+         int secondIndex = getRandomNumberInRange(0, arr.length - 1);
+
+         // swap elements
+         int temp = arr[firstIndex];
+         arr[firstIndex] = arr[secondIndex];
+         arr[secondIndex] = temp;
+      }
+   }
+
+   @Test
+   public void testSwapRandomIndicesInArray()
+   {
+      int[] arr = new int[100];
+      // Generic sort best case is when numbers are ordered
+      for (int i = 0; i < arr.length; ++i)
+      {
+         arr[i] = i;
+      }
+
+      printArrayToConsole(arr);
+
+      double percentage = 10;
+      swapRandomIndicesInArray(arr, percentage);
+
+      printArrayToConsole(arr);
    }
 }

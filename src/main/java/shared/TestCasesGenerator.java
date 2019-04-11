@@ -20,6 +20,8 @@ class TestCasesGenerator
    static final String kRandomLowOnFirstHalfAndHighOnSecondHalf = new String("RandomLowOnFirstHalfAndHighOnSecondHalf");
    static final String kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String ("AscendingOrderHighOnFirstHalfAndLowOnSecondHalf");
    static final String kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String ("DescendingOrderHighOnFirstHalfAndLowOnSecondHalf");
+   static final String kNearlySortedInAscendingOrderCase = new String("NearlySortedInAscendingOrderCase");
+   static final String kNearlySortedInDescendingOrderCase = new String("NearlySortedInDescendingOrderCase");
    static final String kGenerateAllTestCases = new String("GenerateAllTestCases");
 
    // TODO: add new cases here
@@ -31,6 +33,8 @@ class TestCasesGenerator
          kRandomLowOnFirstHalfAndHighOnSecondHalf,
          kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf,
          kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf,
+         kNearlySortedInAscendingOrderCase,
+         kNearlySortedInDescendingOrderCase,
          kGenerateAllTestCases,
    };
 
@@ -83,6 +87,14 @@ class TestCasesGenerator
       {
          generateDescendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
       }
+      else if (0 == testCase.compareToIgnoreCase(kNearlySortedInAscendingOrderCase))
+      {
+         generateNearlySortedInAscendingOrderCase(arr);
+      }
+      else if (0 == testCase.compareToIgnoreCase(kNearlySortedInDescendingOrderCase))
+      {
+         generateNearlySortedInDescendingOrderCase(arr);
+      }
       else
       {
          System.out.println("Invalid Inputs");
@@ -126,8 +138,8 @@ class TestCasesGenerator
 
          // 1 to 1 million
          final int[] kNumberOfElements = new int[] {
-               1,
-               10,
+               //1,
+               //10,
                100,
                1000,
                10000,
@@ -217,9 +229,50 @@ class TestCasesGenerator
    public static void generateRandomOrderCase(int[] arr)
    {
       final int kLowerRange = 0;
-      final int kUpperRange = 1000000;
+      final int kUpperRange = 1000;
       final int kSize = arr.length;
-      arr = SharedFunctions.getRandomArray(kSize, kLowerRange, kUpperRange);
+      int[] tempArr = SharedFunctions.getRandomArray(kSize, kLowerRange, kUpperRange);
+      System.arraycopy( tempArr, 0, arr, 0, kSize);
+   }
+
+   @Test public void testRandomOrderCase()
+   {
+      int[] arr = new int[10];
+      generateRandomOrderCase(arr);
+      SharedFunctions.printArrayToConsole(arr);
+
+      // Make sure array is not in ascending or descending order and they are not the same
+      boolean numbersAreInAscendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] > arr[i+1])
+         {
+            numbersAreInAscendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersAreInDescendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] < arr[i+1])
+         {
+            numbersAreInDescendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersreTheSame = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] != arr[i+1])
+         {
+            numbersreTheSame = false;
+            break;
+         }
+      }
+
+      assertTrue(!numbersAreInAscendingOrder && !numbersAreInDescendingOrder && !numbersreTheSame);
    }
 
    public static void generateRandomHighOnFirstHalfAndLowOnSecondHalf(int[] arr)
@@ -380,5 +433,111 @@ class TestCasesGenerator
       int[] arr = new int[10];
       generateDescendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
       assertArrayEquals(kExpectedOutput, arr);
+   }
+
+   public static void generateNearlySortedInAscendingOrderCase(int[] arr)
+   {
+      // Generic sort best case is when numbers are ordered
+      for (int i = 0; i < arr.length; ++i)
+      {
+         arr[i] = i;
+      }
+
+      final double kPercentageToSwap = 10;
+      SharedFunctions.swapRandomIndicesInArray(arr, kPercentageToSwap);
+   }
+
+   @Test public void verifygenerateNearlySortedInAscendingOrderCase()
+   {
+      int[] arr = new int[100];
+      generateNearlySortedInAscendingOrderCase(arr);
+
+      SharedFunctions.printArrayToConsole(arr);
+
+      // Make sure array is not in ascending or descending order and they are not the same
+      boolean numbersAreInAscendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] > arr[i+1])
+         {
+            numbersAreInAscendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersAreInDescendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] < arr[i+1])
+         {
+            numbersAreInDescendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersreTheSame = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] != arr[i+1])
+         {
+            numbersreTheSame = false;
+            break;
+         }
+      }
+
+      assertTrue(!numbersAreInAscendingOrder && !numbersAreInDescendingOrder && !numbersreTheSame);
+   }
+
+   public static void generateNearlySortedInDescendingOrderCase(int[] arr)
+   {
+      // Generic sort best case is when numbers are ordered
+      for (int i = (arr.length - 1), j = 0; i >= 0; --i, ++j)
+      {
+         arr[j] = i;
+      }
+
+      final double kPercentageToSwap = 10;
+      SharedFunctions.swapRandomIndicesInArray(arr, kPercentageToSwap);
+   }
+
+   @Test public void verifygenerateNearlySortedInDescendingOrderCase()
+   {
+      int[] arr = new int[100];
+      generateNearlySortedInDescendingOrderCase(arr);
+
+      SharedFunctions.printArrayToConsole(arr);
+
+      // Make sure array is not in ascending or descending order and they are not the same
+      boolean numbersAreInAscendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] > arr[i+1])
+         {
+            numbersAreInAscendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersAreInDescendingOrder = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] < arr[i+1])
+         {
+            numbersAreInDescendingOrder = false;
+            break;
+         }
+      }
+
+      boolean numbersreTheSame = true;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         if (arr[i] != arr[i+1])
+         {
+            numbersreTheSame = false;
+            break;
+         }
+      }
+
+      assertTrue(!numbersAreInAscendingOrder && !numbersAreInDescendingOrder && !numbersreTheSame);
    }
 }
