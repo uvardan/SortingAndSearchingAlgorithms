@@ -18,14 +18,16 @@ class TestCasesGenerator
    static final String kRandomOrderCase = new String("RandomOrderCase");
    static final String kRandomHighOnFirstHalfAndLowOnSecondHalf = new String("RandomHighOnFirstHalfAndLowOnSecondHalf");
    static final String kRandomLowOnFirstHalfAndHighOnSecondHalf = new String("RandomLowOnFirstHalfAndHighOnSecondHalf");
-   static final String kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String ("AscendingOrderHighOnFirstHalfAndLowOnSecondHalf");
-   static final String kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String ("DescendingOrderHighOnFirstHalfAndLowOnSecondHalf");
+   static final String kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String("AscendingOrderHighOnFirstHalfAndLowOnSecondHalf");
+   static final String kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf = new String("DescendingOrderHighOnFirstHalfAndLowOnSecondHalf");
    static final String kNearlySortedInAscendingOrderCase = new String("NearlySortedInAscendingOrderCase");
    static final String kNearlySortedInDescendingOrderCase = new String("NearlySortedInDescendingOrderCase");
+   static final String kSameValueCase = new String("SameValueCase");
+   static final String kMergeSortWorstCase = new String("MergeSortWorstCase");
    static final String kGenerateAllTestCases = new String("GenerateAllTestCases");
 
    // TODO: add new cases here
-   static final String[] kValidTestCases = new String[] {
+   static final String[] kValidTestCases = new String[]{
          kSortedInAscendingOrderCase,
          kSortedInDescendingOrderCase,
          kRandomOrderCase,
@@ -35,6 +37,8 @@ class TestCasesGenerator
          kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf,
          kNearlySortedInAscendingOrderCase,
          kNearlySortedInDescendingOrderCase,
+         kSameValueCase,
+         kMergeSortWorstCase,
          kGenerateAllTestCases,
    };
 
@@ -48,7 +52,7 @@ class TestCasesGenerator
       {
          sb.append(kValidTestCases[i]);
 
-         if(i != (size - 1))
+         if (i != (size - 1))
          {
             sb.append(" ,");
          }
@@ -62,40 +66,37 @@ class TestCasesGenerator
       if (0 == testCase.compareToIgnoreCase(kSortedInAscendingOrderCase))
       {
          generateSortedInAscendingOrderCase(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kSortedInDescendingOrderCase))
+      } else if (0 == testCase.compareToIgnoreCase(kSortedInDescendingOrderCase))
       {
          generateSortedInDescendingOrderCase(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kRandomOrderCase))
+      } else if (0 == testCase.compareToIgnoreCase(kRandomOrderCase))
       {
          generateRandomOrderCase(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kRandomHighOnFirstHalfAndLowOnSecondHalf))
+      } else if (0 == testCase.compareToIgnoreCase(kRandomHighOnFirstHalfAndLowOnSecondHalf))
       {
          generateRandomHighOnFirstHalfAndLowOnSecondHalf(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kRandomLowOnFirstHalfAndHighOnSecondHalf))
+      } else if (0 == testCase.compareToIgnoreCase(kRandomLowOnFirstHalfAndHighOnSecondHalf))
       {
          generateRandomLowOnFirstHalfAndHighOnSecondHalf(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf))
+      } else if (0 == testCase.compareToIgnoreCase(kAscendingOrderHighOnFirstHalfAndLowOnSecondHalf))
       {
          generateAscendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf))
+      } else if (0 == testCase.compareToIgnoreCase(kDescendingOrderHighOnFirstHalfAndLowOnSecondHalf))
       {
          generateDescendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kNearlySortedInAscendingOrderCase))
+      } else if (0 == testCase.compareToIgnoreCase(kNearlySortedInAscendingOrderCase))
       {
          generateNearlySortedInAscendingOrderCase(arr);
-      }
-      else if (0 == testCase.compareToIgnoreCase(kNearlySortedInDescendingOrderCase))
+      } else if (0 == testCase.compareToIgnoreCase(kNearlySortedInDescendingOrderCase))
       {
          generateNearlySortedInDescendingOrderCase(arr);
-      }
-      else
+      } else if (0 == testCase.compareToIgnoreCase(kSameValueCase))
+      {
+         generateSameValueCase(arr);
+      } else if (0 == testCase.compareToIgnoreCase(kMergeSortWorstCase))
+      {
+         generateMergeSortWorstCase(arr);
+      } else
       {
          System.out.println("Invalid Inputs");
          System.out.println(kUsage);
@@ -130,14 +131,13 @@ class TestCasesGenerator
 
          // Write case to file.
          SharedFunctions.writeToOutputFile(arr, kOutputFileName);
-      }
-      else if(0 == testCase.compareToIgnoreCase(kGenerateAllTestCases) || 0 == args.length)
+      } else if (0 == testCase.compareToIgnoreCase(kGenerateAllTestCases) || 0 == args.length)
       {
          // Will use one command to generate all test cases since it is
          // faster and can be automated.
 
          // 1 to 1 million
-         final int[] kNumberOfElements = new int[] {
+         final int[] kNumberOfElements = new int[]{
                //1,
                //10,
                100,
@@ -145,9 +145,15 @@ class TestCasesGenerator
                10000,
                100000,
                1000000,
-               10000000,
-               100000000,
+               //10000000,
+               //100000000,
                //1000000000
+         };
+
+         final String[] kTempTestCases = new String[]{
+               kSameValueCase,
+               kMergeSortWorstCase,
+               kGenerateAllTestCases
          };
 
          for (int numberOfDataSizes = 0; numberOfDataSizes < kNumberOfElements.length; ++numberOfDataSizes)
@@ -156,9 +162,9 @@ class TestCasesGenerator
             final int kCurrentDataSize = kNumberOfElements[numberOfDataSizes];
             int[] arr = new int[kCurrentDataSize];
             // exclude the case for kGenerateAllTestCases
-            for (int numberOfTestCases = 0; numberOfTestCases < (kValidTestCases.length - 1); ++numberOfTestCases)
+            for (int numberOfTestCases = 0; numberOfTestCases < (kTempTestCases.length - 1); ++numberOfTestCases)
             {
-               final String kCurrentTestCase = kValidTestCases[numberOfTestCases];
+               final String kCurrentTestCase = kTempTestCases[numberOfTestCases];
 
                // build file name
                // format: TestCase_NumberOfElements.txt
@@ -177,8 +183,7 @@ class TestCasesGenerator
                SharedFunctions.writeToOutputFile(arr, outputFileName.toString());
             }
          }
-      }
-      else
+      } else
       {
          System.out.println("Invalid Number of Arguments");
          System.out.println(kUsage);
@@ -197,7 +202,8 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifySortedInAscendingOrderCaseOutput()
+   @Test
+   public void verifySortedInAscendingOrderCaseOutput()
    {
       int[] sortedInAscending = {0, 1, 2, 3};
       int[] arr = new int[4];
@@ -216,7 +222,8 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifySortedInDescendingOrderCaseOutput()
+   @Test
+   public void verifySortedInDescendingOrderCaseOutput()
    {
       int[] sortedInAscending = {3, 2, 1, 0};
       int[] arr = new int[4];
@@ -232,10 +239,11 @@ class TestCasesGenerator
       final int kUpperRange = 1000;
       final int kSize = arr.length;
       int[] tempArr = SharedFunctions.getRandomArray(kSize, kLowerRange, kUpperRange);
-      System.arraycopy( tempArr, 0, arr, 0, kSize);
+      System.arraycopy(tempArr, 0, arr, 0, kSize);
    }
 
-   @Test public void testRandomOrderCase()
+   @Test
+   public void testRandomOrderCase()
    {
       int[] arr = new int[10];
       generateRandomOrderCase(arr);
@@ -245,7 +253,7 @@ class TestCasesGenerator
       boolean numbersAreInAscendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] > arr[i+1])
+         if (arr[i] > arr[i + 1])
          {
             numbersAreInAscendingOrder = false;
             break;
@@ -255,7 +263,7 @@ class TestCasesGenerator
       boolean numbersAreInDescendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] < arr[i+1])
+         if (arr[i] < arr[i + 1])
          {
             numbersAreInDescendingOrder = false;
             break;
@@ -265,7 +273,7 @@ class TestCasesGenerator
       boolean numbersreTheSame = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] != arr[i+1])
+         if (arr[i] != arr[i + 1])
          {
             numbersreTheSame = false;
             break;
@@ -279,15 +287,14 @@ class TestCasesGenerator
    {
       // This case needs high numbers on the first half of array and
       // lower numbers on the second half of array
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
       for (int i = 0; i < arr.length; ++i)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Put high numbers
             arr[i] = SharedFunctions.getRandomNumberInRange(10000, 1000000);
-         }
-         else
+         } else
          {
             // Upper half (i >= arr.length/2 ). Put low numbers
             arr[i] = SharedFunctions.getRandomNumberInRange(0, 1000);
@@ -295,26 +302,26 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifyRandomHighOnFirstHalfAndLowOnSecondHalfOutput()
+   @Test
+   public void verifyRandomHighOnFirstHalfAndLowOnSecondHalfOutput()
    {
       int[] arr = new int[20];
 
       generateRandomHighOnFirstHalfAndLowOnSecondHalf(arr);
 
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
 
       for (int i = 0; i < arr.length; ++i)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Must be high numbers
-            for (int j = (arr.length - 1); j >= arr.length/2; --j)
+            for (int j = (arr.length - 1); j >= arr.length / 2; --j)
             {
                // check that all numbers in the upper half are lower
                assertTrue(arr[i] > arr[j]);
             }
-         }
-         else
+         } else
          {
             // Upper half (i >= arr.length/2 ). Must be low numbers
             for (int j = 0; j < kArrayHalfCutOff; ++j)
@@ -330,15 +337,14 @@ class TestCasesGenerator
    {
       // This case needs high numbers on the first half of array and
       // lower numbers on the second half of array
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
       for (int i = 0; i < arr.length; ++i)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Put low numbers
             arr[i] = SharedFunctions.getRandomNumberInRange(0, 1000);
-         }
-         else
+         } else
          {
             // Upper half (i >= arr.length). Put high numbers
             arr[i] = SharedFunctions.getRandomNumberInRange(10000, 1000000);
@@ -346,26 +352,26 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifyRandomLowOnFirstHalfAndHighOnSecondHalfOutput()
+   @Test
+   public void verifyRandomLowOnFirstHalfAndHighOnSecondHalfOutput()
    {
       int[] arr = new int[10];
 
       generateRandomLowOnFirstHalfAndHighOnSecondHalf(arr);
 
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
 
       for (int i = 0; i < arr.length; ++i)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Must be low numbers
-            for (int j = (arr.length - 1); j >= arr.length/2; --j)
+            for (int j = (arr.length - 1); j >= arr.length / 2; --j)
             {
                // check that all numbers in the upper half are higher
                assertTrue(arr[i] < arr[j]);
             }
-         }
-         else
+         } else
          {
             // Upper half (i >= arr.length/2 ). Must be high numbers
             for (int j = 0; j < kArrayHalfCutOff; ++j)
@@ -381,15 +387,14 @@ class TestCasesGenerator
    {
       // This case needs high numbers on the first half of array and
       // lower numbers on the second half of array
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
       for (int i = 0, j = (arr.length - 1); i < arr.length; ++i, --j)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Put high numbers
             arr[i] = j;
-         }
-         else
+         } else
          {
             // Upper half (i >= arr.length). Put low numbers
             arr[i] = kArrayHalfCutOff - j - 1;
@@ -397,9 +402,10 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifyAscendingOrderHighOnFirstHalfAndLowOnSecondHalfOutput()
+   @Test
+   public void verifyAscendingOrderHighOnFirstHalfAndLowOnSecondHalfOutput()
    {
-      final int[] kExpectedOutput = new int[] {9, 8, 7, 6, 5, 0, 1, 2, 3,4};
+      final int[] kExpectedOutput = new int[]{9, 8, 7, 6, 5, 0, 1, 2, 3, 4};
 
       int[] arr = new int[10];
       generateAscendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
@@ -410,15 +416,14 @@ class TestCasesGenerator
    {
       // This case needs high numbers on the first half of array and
       // lower numbers on the second half of array
-      final int kArrayHalfCutOff = arr.length/2;
+      final int kArrayHalfCutOff = arr.length / 2;
       for (int i = 0, j = (arr.length - 1); i < arr.length; ++i, --j)
       {
          if (i < kArrayHalfCutOff)
          {
             // Lower half. Put high numbers
-            arr[i] =  kArrayHalfCutOff + i;
-         }
-         else
+            arr[i] = kArrayHalfCutOff + i;
+         } else
          {
             // Upper half (i >= arr.length). Put low numbers
             arr[i] = j;
@@ -426,9 +431,10 @@ class TestCasesGenerator
       }
    }
 
-   @Test public void verifyDescendingOrderHighOnFirstHalfAndLowOnSecondHalf()
+   @Test
+   public void verifyDescendingOrderHighOnFirstHalfAndLowOnSecondHalf()
    {
-      final int[] kExpectedOutput = new int[] {5, 6, 7, 8, 9, 4, 3, 2, 1, 0};
+      final int[] kExpectedOutput = new int[]{5, 6, 7, 8, 9, 4, 3, 2, 1, 0};
 
       int[] arr = new int[10];
       generateDescendingOrderHighOnFirstHalfAndLowOnSecondHalf(arr);
@@ -447,7 +453,8 @@ class TestCasesGenerator
       SharedFunctions.swapRandomIndicesInArray(arr, kPercentageToSwap);
    }
 
-   @Test public void verifygenerateNearlySortedInAscendingOrderCase()
+   @Test
+   public void verifygenerateNearlySortedInAscendingOrderCase()
    {
       int[] arr = new int[100];
       generateNearlySortedInAscendingOrderCase(arr);
@@ -458,7 +465,7 @@ class TestCasesGenerator
       boolean numbersAreInAscendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] > arr[i+1])
+         if (arr[i] > arr[i + 1])
          {
             numbersAreInAscendingOrder = false;
             break;
@@ -468,7 +475,7 @@ class TestCasesGenerator
       boolean numbersAreInDescendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] < arr[i+1])
+         if (arr[i] < arr[i + 1])
          {
             numbersAreInDescendingOrder = false;
             break;
@@ -478,7 +485,7 @@ class TestCasesGenerator
       boolean numbersreTheSame = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] != arr[i+1])
+         if (arr[i] != arr[i + 1])
          {
             numbersreTheSame = false;
             break;
@@ -500,7 +507,8 @@ class TestCasesGenerator
       SharedFunctions.swapRandomIndicesInArray(arr, kPercentageToSwap);
    }
 
-   @Test public void verifygenerateNearlySortedInDescendingOrderCase()
+   @Test
+   public void verifygenerateNearlySortedInDescendingOrderCase()
    {
       int[] arr = new int[100];
       generateNearlySortedInDescendingOrderCase(arr);
@@ -511,7 +519,7 @@ class TestCasesGenerator
       boolean numbersAreInAscendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] > arr[i+1])
+         if (arr[i] > arr[i + 1])
          {
             numbersAreInAscendingOrder = false;
             break;
@@ -521,7 +529,7 @@ class TestCasesGenerator
       boolean numbersAreInDescendingOrder = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] < arr[i+1])
+         if (arr[i] < arr[i + 1])
          {
             numbersAreInDescendingOrder = false;
             break;
@@ -531,7 +539,7 @@ class TestCasesGenerator
       boolean numbersreTheSame = true;
       for (int i = 0; i < arr.length - 1; ++i)
       {
-         if (arr[i] != arr[i+1])
+         if (arr[i] != arr[i + 1])
          {
             numbersreTheSame = false;
             break;
@@ -539,5 +547,96 @@ class TestCasesGenerator
       }
 
       assertTrue(!numbersAreInAscendingOrder && !numbersAreInDescendingOrder && !numbersreTheSame);
+   }
+
+   public static void generateSameValueCase(int[] arr)
+   {
+      final int kConstValue = 10;
+      for (int i = 0; i < arr.length - 1; ++i)
+      {
+         arr[i] = kConstValue;
+      }
+   }
+
+   @Test
+   public void verifySameValueCase()
+   {
+      int[] arr = new int[20];
+      generateSameValueCase(arr);
+
+      final int kFirstValue = arr[0];
+      for (int i = 1; i < arr.length - 1; ++i)
+      {
+         assertTrue(kFirstValue == arr[i]);
+      }
+   }
+
+   // Function to generate Worst Case of Merge Sort
+   static void generateMergeSortWorstCase(int arr[])
+   {
+      // First generate values in ascending order before
+      // building the worst case.
+      generateSortedInAscendingOrderCase(arr);
+      generateMergeSortWorstCaseHelperFunction(arr, 0, arr.length - 1);
+   }
+
+   // Reference: https://www.geeksforgeeks.org/find-a-permutation-that-causes-worst-case-of-merge-sort/
+   // Function to join left and right subarray
+   static void join(int arr[], int left[], int right[],
+                    int l, int m, int r)
+   {
+      int i;
+      for (i = 0; i <= m - l; i++)
+         arr[i] = left[i];
+
+      for (int j = 0; j < r - m; j++)
+         arr[i + j] = right[j];
+   }
+
+   // Function to store alternate elemets in left
+   // and right subarray
+   static void split(int arr[], int left[], int right[],
+                     int l, int m, int r)
+   {
+      for (int i = 0; i <= m - l; i++)
+         left[i] = arr[i * 2];
+
+      for (int i = 0; i < r - m; i++)
+         right[i] = arr[i * 2 + 1];
+   }
+
+   // Function to generate Worst Case of Merge Sort
+   static void generateMergeSortWorstCaseHelperFunction(int arr[], int l, int r)
+   {
+      if (l < r)
+      {
+         int m = l + (r - l) / 2;
+
+         // create two auxillary arrays
+         int[] left = new int[m - l + 1];
+         int[] right = new int[r - m];
+
+         // Store alternate array elements in left
+         // and right subarray
+         split(arr, left, right, l, m, r);
+
+         // Recurse first and second halves
+         generateMergeSortWorstCaseHelperFunction(left, l, m);
+         generateMergeSortWorstCaseHelperFunction(right, m + 1, r);
+
+         // join left and right subarray
+         join(arr, left, right, l, m, r);
+      }
+   }
+
+   // Reference: https://www.geeksforgeeks.org/find-a-permutation-that-causes-worst-case-of-merge-sort/
+   @Test public void verifyMergeSortWorstCaseGenerator()
+   {
+      // sorted array
+      int arr[] = new int[16];
+      generateMergeSortWorstCase(arr);
+      final int[] kExpectedOutput = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
+      SharedFunctions.printArrayToConsole(arr);
+      assertArrayEquals(kExpectedOutput, arr);
    }
 }
