@@ -23,6 +23,8 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100.txt",
          "testCases/NearlySortedInAscendingOrderCase_100.txt",
          "testCases/NearlySortedInDescendingOrderCase_100.txt",
+         "testCases/SameValueCase_100.txt",
+         "testCases/MergeSortWorstCase_100.txt",
          "testCases/SortedInAscendingOrderCase_1000.txt",
          "testCases/SortedInDescendingOrderCase_1000.txt",
          "testCases/RandomOrderCase_1000.txt",
@@ -32,6 +34,8 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000.txt",
          "testCases/NearlySortedInAscendingOrderCase_1000.txt",
          "testCases/NearlySortedInDescendingOrderCase_1000.txt",
+         "testCases/SameValueCase_1000.txt",
+         "testCases/MergeSortWorstCase_1000.txt",
          "testCases/SortedInAscendingOrderCase_10000.txt",
          "testCases/SortedInDescendingOrderCase_10000.txt",
          "testCases/RandomOrderCase_10000.txt",
@@ -41,6 +45,8 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000.txt",
          "testCases/NearlySortedInAscendingOrderCase_10000.txt",
          "testCases/NearlySortedInDescendingOrderCase_10000.txt",
+         "testCases/SameValueCase_10000.txt",
+         "testCases/MergeSortWorstCase_10000.txt",
          "testCases/SortedInAscendingOrderCase_100000.txt",
          "testCases/SortedInDescendingOrderCase_100000.txt",
          "testCases/RandomOrderCase_100000.txt",
@@ -50,6 +56,8 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000.txt",
          "testCases/NearlySortedInAscendingOrderCase_100000.txt",
          "testCases/NearlySortedInDescendingOrderCase_100000.txt",
+         "testCases/SameValueCase_100000.txt",
+         "testCases/MergeSortWorstCase_100000.txt",
          "testCases/SortedInAscendingOrderCase_1000000.txt",
          "testCases/SortedInDescendingOrderCase_1000000.txt",
          "testCases/RandomOrderCase_1000000.txt",
@@ -59,6 +67,9 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000000.txt",
          "testCases/NearlySortedInAscendingOrderCase_1000000.txt",
          "testCases/NearlySortedInDescendingOrderCase_1000000.txt",
+         "testCases/SameValueCase_1000000.txt",
+         "testCases/MergeSortWorstCase_1000000.txt",
+         /*
          "testCases/SortedInAscendingOrderCase_10000000.txt",
          "testCases/SortedInDescendingOrderCase_10000000.txt",
          "testCases/RandomOrderCase_10000000.txt",
@@ -77,6 +88,7 @@ public class BenchmarkAllSortTestCases {
          "testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000000.txt",
          "testCases/NearlySortedInAscendingOrderCase_100000000.txt",
          "testCases/NearlySortedInDescendingOrderCase_100000000.txt",
+         */
    })
    public String fileName;
 
