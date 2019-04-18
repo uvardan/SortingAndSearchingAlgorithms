@@ -56,4 +56,10 @@ public class BenchmarkBestCases {
     {
         ShellSort.sortArray(inputArray);
     }
+
+    @Benchmark
+    public void JavaUtilArraysSort()
+    {
+        JavaUtilArraysSort.sortArray(inputArray);
+    }
 }
