@@ -55,4 +55,10 @@ public class BenchmarkAverageCases {
    {
       ShellSort.sortArray(inputArray);
    }
+
+   @Benchmark
+   public void JavaUtilArraysSort()
+   {
+      JavaUtilArraysSort.sortArray(inputArray);
+   }
 }
