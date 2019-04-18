@@ -11,7 +11,7 @@ public class BubbleSort
    {
       if (null == arr)
       {
-         throw new IllegalArgumentException("Input array cannot be null or zero!");
+         throw new IllegalArgumentException("Input array cannot be null!");
       }
       if(arr.length>0) {
 
