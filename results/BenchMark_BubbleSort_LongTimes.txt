@@ -1,0 +1,1344 @@
+"C:\Program Files\Java\jdk-12\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\rfuser\Documents\GitHub\SortingAndSearchingAlgorithms\target\test-classes;C:\Users\rfuser\Documents\GitHub\SortingAndSearchingAlgorithms\target\classes;C:\Users\rfuser\.m2\repository\org\openjdk\jmh\jmh-core\1.21\jmh-core-1.21.jar;C:\Users\rfuser\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\rfuser\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\rfuser\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.21\jmh-generator-annprocess-1.21.jar;C:\Users\rfuser\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.0-M1\junit-jupiter-api-5.5.0-M1.jar;C:\Users\rfuser\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\rfuser\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\rfuser\.m2\repository\org\junit\platform\junit-platform-commons\1.5.0-M1\junit-platform-commons-1.5.0-M1.jar bench.BenchmarkRunner
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/C:/Users/rfuser/.m2/repository/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar) to field java.io.PrintStream.charOut
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInAscendingOrderCase_1000.txt)
+
+# Run progress: 0.00% complete, ETA 10:43:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.175 ms/op
+# Warmup Iteration   2: 0.173 ms/op
+# Warmup Iteration   3: 0.173 ms/op
+Iteration   1: 0.174 ms/op
+Iteration   2: 0.174 ms/op
+Iteration   3: 0.174 ms/op
+Iteration   4: 0.174 ms/op
+Iteration   5: 0.174 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.174 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.174, 0.174, 0.174), stdev = 0.001
+  CI (99.9%): [0.173, 0.174] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInDescendingOrderCase_1000.txt)
+
+# Run progress: 0.17% complete, ETA 10:49:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.215 ms/op
+# Warmup Iteration   2: 0.216 ms/op
+# Warmup Iteration   3: 0.214 ms/op
+Iteration   1: 0.217 ms/op
+Iteration   2: 0.212 ms/op
+Iteration   3: 0.212 ms/op
+Iteration   4: 0.212 ms/op
+Iteration   5: 0.212 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.213 ±(99.9%) 0.008 ms/op [Average]
+  (min, avg, max) = (0.212, 0.213, 0.217), stdev = 0.002
+  CI (99.9%): [0.204, 0.221] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomOrderCase_1000.txt)
+
+# Run progress: 0.34% complete, ETA 10:48:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.206 ms/op
+# Warmup Iteration   2: 0.206 ms/op
+# Warmup Iteration   3: 0.206 ms/op
+Iteration   1: 0.206 ms/op
+Iteration   2: 0.206 ms/op
+Iteration   3: 0.206 ms/op
+Iteration   4: 0.206 ms/op
+Iteration   5: 0.206 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.206 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.206, 0.206, 0.206), stdev = 0.001
+  CI (99.9%): [0.205, 0.207] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1000.txt)
+
+# Run progress: 0.51% complete, ETA 10:47:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.215 ms/op
+# Warmup Iteration   2: 0.214 ms/op
+# Warmup Iteration   3: 0.216 ms/op
+Iteration   1: 0.220 ms/op
+Iteration   2: 0.212 ms/op
+Iteration   3: 0.212 ms/op
+Iteration   4: 0.212 ms/op
+Iteration   5: 0.212 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.213 ±(99.9%) 0.013 ms/op [Average]
+  (min, avg, max) = (0.212, 0.213, 0.220), stdev = 0.003
+  CI (99.9%): [0.200, 0.227] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1000.txt)
+
+# Run progress: 0.67% complete, ETA 10:45:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.207 ms/op
+# Warmup Iteration   2: 0.206 ms/op
+# Warmup Iteration   3: 0.206 ms/op
+Iteration   1: 0.206 ms/op
+Iteration   2: 0.206 ms/op
+Iteration   3: 0.206 ms/op
+Iteration   4: 0.206 ms/op
+Iteration   5: 0.206 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.206 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.206, 0.206, 0.206), stdev = 0.001
+  CI (99.9%): [0.206, 0.206] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000.txt)
+
+# Run progress: 0.84% complete, ETA 10:44:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.209 ms/op
+# Warmup Iteration   2: 0.206 ms/op
+# Warmup Iteration   3: 0.211 ms/op
+Iteration   1: 0.214 ms/op
+Iteration   2: 0.206 ms/op
+Iteration   3: 0.206 ms/op
+Iteration   4: 0.206 ms/op
+Iteration   5: 0.206 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.208 ±(99.9%) 0.014 ms/op [Average]
+  (min, avg, max) = (0.206, 0.208, 0.214), stdev = 0.004
+  CI (99.9%): [0.193, 0.222] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000.txt)
+
+# Run progress: 1.01% complete, ETA 10:43:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.215 ms/op
+# Warmup Iteration   2: 0.214 ms/op
+# Warmup Iteration   3: 0.215 ms/op
+Iteration   1: 0.217 ms/op
+Iteration   2: 0.212 ms/op
+Iteration   3: 0.212 ms/op
+Iteration   4: 0.212 ms/op
+Iteration   5: 0.211 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.213 ±(99.9%) 0.009 ms/op [Average]
+  (min, avg, max) = (0.211, 0.213, 0.217), stdev = 0.002
+  CI (99.9%): [0.204, 0.221] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInAscendingOrderCase_1000.txt)
+
+# Run progress: 1.18% complete, ETA 10:42:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.206 ms/op
+# Warmup Iteration   2: 0.206 ms/op
+# Warmup Iteration   3: 0.209 ms/op
+Iteration   1: 0.206 ms/op
+Iteration   2: 0.206 ms/op
+Iteration   3: 0.206 ms/op
+Iteration   4: 0.206 ms/op
+Iteration   5: 0.206 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.206 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.206, 0.206, 0.206), stdev = 0.001
+  CI (99.9%): [0.205, 0.207] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInDescendingOrderCase_1000.txt)
+
+# Run progress: 1.35% complete, ETA 10:41:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.215 ms/op
+# Warmup Iteration   2: 0.214 ms/op
+# Warmup Iteration   3: 0.215 ms/op
+Iteration   1: 0.217 ms/op
+Iteration   2: 0.212 ms/op
+Iteration   3: 0.212 ms/op
+Iteration   4: 0.212 ms/op
+Iteration   5: 0.212 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.213 ±(99.9%) 0.009 ms/op [Average]
+  (min, avg, max) = (0.212, 0.213, 0.217), stdev = 0.002
+  CI (99.9%): [0.204, 0.221] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SameValueCase_1000.txt)
+
+# Run progress: 1.52% complete, ETA 10:40:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.174 ms/op
+# Warmup Iteration   2: 0.173 ms/op
+# Warmup Iteration   3: 0.173 ms/op
+Iteration   1: 0.173 ms/op
+Iteration   2: 0.174 ms/op
+Iteration   3: 0.174 ms/op
+Iteration   4: 0.174 ms/op
+Iteration   5: 0.174 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.174 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.173, 0.174, 0.174), stdev = 0.001
+  CI (99.9%): [0.172, 0.175] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/MergeSortWorstCase_1000.txt)
+
+# Run progress: 1.68% complete, ETA 10:39:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.209 ms/op
+# Warmup Iteration   2: 0.206 ms/op
+# Warmup Iteration   3: 0.211 ms/op
+Iteration   1: 0.215 ms/op
+Iteration   2: 0.206 ms/op
+Iteration   3: 0.206 ms/op
+Iteration   4: 0.208 ms/op
+Iteration   5: 0.206 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  0.208 ±(99.9%) 0.014 ms/op [Average]
+  (min, avg, max) = (0.206, 0.208, 0.215), stdev = 0.004
+  CI (99.9%): [0.194, 0.223] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInAscendingOrderCase_10000.txt)
+
+# Run progress: 1.85% complete, ETA 10:38:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 16.697 ms/op
+# Warmup Iteration   2: 16.633 ms/op
+# Warmup Iteration   3: 16.627 ms/op
+Iteration   1: 16.639 ms/op
+Iteration   2: 16.754 ms/op
+Iteration   3: 16.955 ms/op
+Iteration   4: 16.671 ms/op
+Iteration   5: 16.672 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  16.738 ±(99.9%) 0.494 ms/op [Average]
+  (min, avg, max) = (16.639, 16.738, 16.955), stdev = 0.128
+  CI (99.9%): [16.244, 17.232] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInDescendingOrderCase_10000.txt)
+
+# Run progress: 2.02% complete, ETA 10:37:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 20.595 ms/op
+# Warmup Iteration   2: 20.056 ms/op
+# Warmup Iteration   3: 20.067 ms/op
+Iteration   1: 20.067 ms/op
+Iteration   2: 20.072 ms/op
+Iteration   3: 20.085 ms/op
+Iteration   4: 20.036 ms/op
+Iteration   5: 20.000 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.052 ±(99.9%) 0.131 ms/op [Average]
+  (min, avg, max) = (20.000, 20.052, 20.085), stdev = 0.034
+  CI (99.9%): [19.921, 20.183] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomOrderCase_10000.txt)
+
+# Run progress: 2.19% complete, ETA 10:36:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.963 ms/op
+# Warmup Iteration   2: 20.041 ms/op
+# Warmup Iteration   3: 20.076 ms/op
+Iteration   1: 20.065 ms/op
+Iteration   2: 20.073 ms/op
+Iteration   3: 20.044 ms/op
+Iteration   4: 20.056 ms/op
+Iteration   5: 20.046 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.057 ±(99.9%) 0.047 ms/op [Average]
+  (min, avg, max) = (20.044, 20.057, 20.073), stdev = 0.012
+  CI (99.9%): [20.009, 20.104] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_10000.txt)
+
+# Run progress: 2.36% complete, ETA 10:34:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.889 ms/op
+# Warmup Iteration   2: 20.098 ms/op
+# Warmup Iteration   3: 20.122 ms/op
+Iteration   1: 20.112 ms/op
+Iteration   2: 20.147 ms/op
+Iteration   3: 20.102 ms/op
+Iteration   4: 20.101 ms/op
+Iteration   5: 20.098 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.112 ±(99.9%) 0.077 ms/op [Average]
+  (min, avg, max) = (20.098, 20.112, 20.147), stdev = 0.020
+  CI (99.9%): [20.035, 20.189] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_10000.txt)
+
+# Run progress: 2.53% complete, ETA 10:33:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.851 ms/op
+# Warmup Iteration   2: 20.033 ms/op
+# Warmup Iteration   3: 20.037 ms/op
+Iteration   1: 20.058 ms/op
+Iteration   2: 20.019 ms/op
+Iteration   3: 20.018 ms/op
+Iteration   4: 20.004 ms/op
+Iteration   5: 20.244 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.069 ±(99.9%) 0.386 ms/op [Average]
+  (min, avg, max) = (20.004, 20.069, 20.244), stdev = 0.100
+  CI (99.9%): [19.683, 20.455] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000.txt)
+
+# Run progress: 2.69% complete, ETA 10:32:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 20.427 ms/op
+# Warmup Iteration   2: 20.065 ms/op
+# Warmup Iteration   3: 20.074 ms/op
+Iteration   1: 20.067 ms/op
+Iteration   2: 20.029 ms/op
+Iteration   3: 20.026 ms/op
+Iteration   4: 20.035 ms/op
+Iteration   5: 20.023 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.036 ±(99.9%) 0.068 ms/op [Average]
+  (min, avg, max) = (20.023, 20.036, 20.067), stdev = 0.018
+  CI (99.9%): [19.968, 20.104] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_10000.txt)
+
+# Run progress: 2.86% complete, ETA 10:31:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.747 ms/op
+# Warmup Iteration   2: 20.071 ms/op
+# Warmup Iteration   3: 20.047 ms/op
+Iteration   1: 20.063 ms/op
+Iteration   2: 20.050 ms/op
+Iteration   3: 20.046 ms/op
+Iteration   4: 20.029 ms/op
+Iteration   5: 20.038 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.045 ±(99.9%) 0.050 ms/op [Average]
+  (min, avg, max) = (20.029, 20.045, 20.063), stdev = 0.013
+  CI (99.9%): [19.995, 20.095] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInAscendingOrderCase_10000.txt)
+
+# Run progress: 3.03% complete, ETA 10:30:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.803 ms/op
+# Warmup Iteration   2: 20.040 ms/op
+# Warmup Iteration   3: 20.031 ms/op
+Iteration   1: 20.046 ms/op
+Iteration   2: 20.036 ms/op
+Iteration   3: 20.038 ms/op
+Iteration   4: 20.030 ms/op
+Iteration   5: 20.045 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.039 ±(99.9%) 0.026 ms/op [Average]
+  (min, avg, max) = (20.030, 20.039, 20.046), stdev = 0.007
+  CI (99.9%): [20.013, 20.065] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInDescendingOrderCase_10000.txt)
+
+# Run progress: 3.20% complete, ETA 10:29:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.773 ms/op
+# Warmup Iteration   2: 20.032 ms/op
+# Warmup Iteration   3: 20.039 ms/op
+Iteration   1: 20.090 ms/op
+Iteration   2: 20.026 ms/op
+Iteration   3: 20.029 ms/op
+Iteration   4: 20.038 ms/op
+Iteration   5: 20.041 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.045 ±(99.9%) 0.100 ms/op [Average]
+  (min, avg, max) = (20.026, 20.045, 20.090), stdev = 0.026
+  CI (99.9%): [19.945, 20.145] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SameValueCase_10000.txt)
+
+# Run progress: 3.37% complete, ETA 10:28:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 18.068 ms/op
+# Warmup Iteration   2: 16.604 ms/op
+# Warmup Iteration   3: 16.602 ms/op
+Iteration   1: 16.613 ms/op
+Iteration   2: 16.634 ms/op
+Iteration   3: 16.651 ms/op
+Iteration   4: 16.662 ms/op
+Iteration   5: 16.646 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  16.641 ±(99.9%) 0.072 ms/op [Average]
+  (min, avg, max) = (16.613, 16.641, 16.662), stdev = 0.019
+  CI (99.9%): [16.569, 16.713] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/MergeSortWorstCase_10000.txt)
+
+# Run progress: 3.54% complete, ETA 10:27:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 21.823 ms/op
+# Warmup Iteration   2: 20.093 ms/op
+# Warmup Iteration   3: 20.118 ms/op
+Iteration   1: 20.101 ms/op
+Iteration   2: 20.094 ms/op
+Iteration   3: 20.087 ms/op
+Iteration   4: 20.117 ms/op
+Iteration   5: 20.100 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  20.100 ±(99.9%) 0.043 ms/op [Average]
+  (min, avg, max) = (20.087, 20.100, 20.117), stdev = 0.011
+  CI (99.9%): [20.056, 20.143] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInAscendingOrderCase_100000.txt)
+
+# Run progress: 3.70% complete, ETA 10:26:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 1660.916 ms/op
+# Warmup Iteration   2: 1657.976 ms/op
+# Warmup Iteration   3: 1657.048 ms/op
+Iteration   1: 1656.707 ms/op
+Iteration   2: 1657.203 ms/op
+Iteration   3: 1656.010 ms/op
+Iteration   4: 1655.225 ms/op
+Iteration   5: 1652.653 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1655.560 ±(99.9%) 6.884 ms/op [Average]
+  (min, avg, max) = (1652.653, 1655.560, 1657.203), stdev = 1.788
+  CI (99.9%): [1648.676, 1662.443] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInDescendingOrderCase_100000.txt)
+
+# Run progress: 3.87% complete, ETA 10:30:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 5413.314 ms/op
+# Warmup Iteration   2: 1993.415 ms/op
+# Warmup Iteration   3: 1993.910 ms/op
+Iteration   1: 1996.821 ms/op
+Iteration   2: 1994.000 ms/op
+Iteration   3: 1992.648 ms/op
+Iteration   4: 1992.932 ms/op
+Iteration   5: 1995.111 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1994.303 ±(99.9%) 6.587 ms/op [Average]
+  (min, avg, max) = (1992.648, 1994.303, 1996.821), stdev = 1.711
+  CI (99.9%): [1987.715, 2000.890] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomOrderCase_100000.txt)
+
+# Run progress: 4.04% complete, ETA 10:36:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 16871.301 ms/op
+# Warmup Iteration   2: 6639.803 ms/op
+# Warmup Iteration   3: 1992.791 ms/op
+Iteration   1: 1991.999 ms/op
+Iteration   2: 1992.083 ms/op
+Iteration   3: 2003.306 ms/op
+Iteration   4: 2028.618 ms/op
+Iteration   5: 2012.689 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  2005.739 ±(99.9%) 59.435 ms/op [Average]
+  (min, avg, max) = (1991.999, 2005.739, 2028.618), stdev = 15.435
+  CI (99.9%): [1946.304, 2065.174] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_100000.txt)
+
+# Run progress: 4.21% complete, ETA 10:42:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 12234.603 ms/op
+# Warmup Iteration   2: 6675.385 ms/op
+# Warmup Iteration   3: 1993.772 ms/op
+Iteration   1: 1992.955 ms/op
+Iteration   2: 1992.241 ms/op
+Iteration   3: 1992.709 ms/op
+Iteration   4: 1993.128 ms/op
+Iteration   5: 1994.739 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1993.154 ±(99.9%) 3.644 ms/op [Average]
+  (min, avg, max) = (1992.241, 1993.154, 1994.739), stdev = 0.946
+  CI (99.9%): [1989.510, 1996.799] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_100000.txt)
+
+# Run progress: 4.38% complete, ETA 10:47:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 11853.126 ms/op
+# Warmup Iteration   2: 6642.259 ms/op
+# Warmup Iteration   3: 1999.635 ms/op
+Iteration   1: 1993.751 ms/op
+Iteration   2: 1992.461 ms/op
+Iteration   3: 1993.723 ms/op
+Iteration   4: 1992.813 ms/op
+Iteration   5: 1992.340 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1993.018 ±(99.9%) 2.616 ms/op [Average]
+  (min, avg, max) = (1992.340, 1993.018, 1993.751), stdev = 0.679
+  CI (99.9%): [1990.401, 1995.634] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000.txt)
+
+# Run progress: 4.55% complete, ETA 10:52:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 5726.346 ms/op
+# Warmup Iteration   2: 1995.204 ms/op
+# Warmup Iteration   3: 1996.288 ms/op
+Iteration   1: 1996.737 ms/op
+Iteration   2: 1997.225 ms/op
+Iteration   3: 1994.821 ms/op
+Iteration   4: 1995.075 ms/op
+Iteration   5: 1993.046 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1995.381 ±(99.9%) 6.414 ms/op [Average]
+  (min, avg, max) = (1993.046, 1995.381, 1997.225), stdev = 1.666
+  CI (99.9%): [1988.966, 2001.795] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_100000.txt)
+
+# Run progress: 4.71% complete, ETA 10:56:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 7656.238 ms/op
+# Warmup Iteration   2: 6626.745 ms/op
+# Warmup Iteration   3: 1990.642 ms/op
+Iteration   1: 1988.143 ms/op
+Iteration   2: 1992.680 ms/op
+Iteration   3: 1993.265 ms/op
+Iteration   4: 1994.323 ms/op
+Iteration   5: 1994.947 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1992.671 ±(99.9%) 10.326 ms/op [Average]
+  (min, avg, max) = (1988.143, 1992.671, 1994.947), stdev = 2.682
+  CI (99.9%): [1982.345, 2002.998] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInAscendingOrderCase_100000.txt)
+
+# Run progress: 4.88% complete, ETA 10:58:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 9871.013 ms/op
+# Warmup Iteration   2: 6636.839 ms/op
+# Warmup Iteration   3: 1992.274 ms/op
+Iteration   1: 1992.218 ms/op
+Iteration   2: 1991.742 ms/op
+Iteration   3: 1992.048 ms/op
+Iteration   4: 1989.881 ms/op
+Iteration   5: 1989.716 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1991.121 ±(99.9%) 4.700 ms/op [Average]
+  (min, avg, max) = (1989.716, 1991.121, 1992.218), stdev = 1.221
+  CI (99.9%): [1986.421, 1995.821] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInDescendingOrderCase_100000.txt)
+
+# Run progress: 5.05% complete, ETA 11:01:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 9585.472 ms/op
+# Warmup Iteration   2: 6626.510 ms/op
+# Warmup Iteration   3: 1989.532 ms/op
+Iteration   1: 1991.601 ms/op
+Iteration   2: 1994.596 ms/op
+Iteration   3: 1992.788 ms/op
+Iteration   4: 1992.740 ms/op
+Iteration   5: 1992.399 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1992.825 ±(99.9%) 4.229 ms/op [Average]
+  (min, avg, max) = (1991.601, 1992.825, 1994.596), stdev = 1.098
+  CI (99.9%): [1988.596, 1997.054] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SameValueCase_100000.txt)
+
+# Run progress: 5.22% complete, ETA 11:04:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 6632.946 ms/op
+# Warmup Iteration   2: 6643.018 ms/op
+# Warmup Iteration   3: 1663.952 ms/op
+Iteration   1: 1662.870 ms/op
+Iteration   2: 1663.196 ms/op
+Iteration   3: 1661.608 ms/op
+Iteration   4: 1661.558 ms/op
+Iteration   5: 1662.852 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1662.417 ±(99.9%) 2.979 ms/op [Average]
+  (min, avg, max) = (1661.558, 1662.417, 1663.196), stdev = 0.774
+  CI (99.9%): [1659.438, 1665.395] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/MergeSortWorstCase_100000.txt)
+
+# Run progress: 5.39% complete, ETA 11:05:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 8058.964 ms/op
+# Warmup Iteration   2: 6638.777 ms/op
+# Warmup Iteration   3: 1991.286 ms/op
+Iteration   1: 1990.412 ms/op
+Iteration   2: 1989.687 ms/op
+Iteration   3: 1991.306 ms/op
+Iteration   4: 1989.855 ms/op
+Iteration   5: 1988.382 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  1989.928 ±(99.9%) 4.123 ms/op [Average]
+  (min, avg, max) = (1988.382, 1989.928, 1991.306), stdev = 1.071
+  CI (99.9%): [1985.805, 1994.051] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInAscendingOrderCase_1000000.txt)
+
+# Run progress: 5.56% complete, ETA 11:07:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 166023.344 ms/op
+# Warmup Iteration   2: 167517.299 ms/op
+# Warmup Iteration   3: 168342.230 ms/op
+Iteration   1: 168343.758 ms/op
+Iteration   2: 168026.303 ms/op
+Iteration   3: 167936.341 ms/op
+Iteration   4: 168150.203 ms/op
+Iteration   5: 168111.810 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  168113.683 ±(99.9%) 588.271 ms/op [Average]
+  (min, avg, max) = (167936.341, 168113.683, 168343.758), stdev = 152.772
+  CI (99.9%): [167525.412, 168701.954] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInDescendingOrderCase_1000000.txt)
+
+# Run progress: 5.72% complete, ETA 16:55:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 420701.598 ms/op
+# Warmup Iteration   2: 672121.741 ms/op
+# Warmup Iteration   3: 201798.770 ms/op
+Iteration   1: 201683.955 ms/op
+Iteration   2: 201839.273 ms/op
+Iteration   3: 201946.386 ms/op
+Iteration   4: 201746.235 ms/op
+Iteration   5: 201872.602 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  201817.690 ±(99.9%) 399.405 ms/op [Average]
+  (min, avg, max) = (201683.955, 201817.690, 201946.386), stdev = 103.724
+  CI (99.9%): [201418.285, 202217.095] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomOrderCase_1000000.txt)
+
+# Run progress: 5.89% complete, ETA 1 days, 02:37:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 1718186.615 ms/op
+# Warmup Iteration   2: 672977.047 ms/op
+# Warmup Iteration   3: 200687.450 ms/op
+Iteration   1: 199247.294 ms/op
+Iteration   2: 199354.865 ms/op
+Iteration   3: 199266.789 ms/op
+Iteration   4: 199298.043 ms/op
+Iteration   5: 199287.747 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199290.948 ±(99.9%) 156.832 ms/op [Average]
+  (min, avg, max) = (199247.294, 199290.948, 199354.865), stdev = 40.729
+  CI (99.9%): [199134.116, 199447.780] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomHighOnFirstHalfAndLowOnSecondHalf_1000000.txt)
+
+# Run progress: 6.06% complete, ETA 1 days, 17:17:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 1249346.888 ms/op
+# Warmup Iteration   2: 664707.476 ms/op
+# Warmup Iteration   3: 199452.280 ms/op
+Iteration   1: 199324.837 ms/op
+Iteration   2: 199416.244 ms/op
+Iteration   3: 199179.628 ms/op
+Iteration   4: 199355.637 ms/op
+Iteration   5: 199472.025 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199349.674 ±(99.9%) 426.055 ms/op [Average]
+  (min, avg, max) = (199179.628, 199349.674, 199472.025), stdev = 110.645
+  CI (99.9%): [198923.620, 199775.729] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/RandomLowOnFirstHalfAndHighOnSecondHalf_1000000.txt)
+
+# Run progress: 6.23% complete, ETA 2 days, 05:07:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 1182503.408 ms/op
+# Warmup Iteration   2: 664100.548 ms/op
+# Warmup Iteration   3: 199180.376 ms/op
+Iteration   1: 199339.743 ms/op
+Iteration   2: 199535.579 ms/op
+Iteration   3: 199266.637 ms/op
+Iteration   4: 199381.335 ms/op
+Iteration   5: 199208.944 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199346.448 ±(99.9%) 480.597 ms/op [Average]
+  (min, avg, max) = (199208.944, 199346.448, 199535.579), stdev = 124.809
+  CI (99.9%): [198865.851, 199827.045] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/AscendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000000.txt)
+
+# Run progress: 6.40% complete, ETA 2 days, 15:59:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 474651.793 ms/op
+# Warmup Iteration   2: 663636.190 ms/op
+# Warmup Iteration   3: 199092.018 ms/op
+Iteration   1: 199017.822 ms/op
+Iteration   2: 199171.568 ms/op
+Iteration   3: 199231.048 ms/op
+Iteration   4: 199124.196 ms/op
+Iteration   5: 199475.629 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199204.053 ±(99.9%) 657.426 ms/op [Average]
+  (min, avg, max) = (199017.822, 199204.053, 199475.629), stdev = 170.731
+  CI (99.9%): [198546.627, 199861.478] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/DescendingOrderHighOnFirstHalfAndLowOnSecondHalf_1000000.txt)
+
+# Run progress: 6.57% complete, ETA 2 days, 23:28:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 764681.541 ms/op
+# Warmup Iteration   2: 663103.430 ms/op
+# Warmup Iteration   3: 199214.033 ms/op
+Iteration   1: 199268.226 ms/op
+Iteration   2: 199162.669 ms/op
+Iteration   3: 199164.702 ms/op
+Iteration   4: 199249.775 ms/op
+Iteration   5: 199143.849 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199197.844 ±(99.9%) 218.687 ms/op [Average]
+  (min, avg, max) = (199143.849, 199197.844, 199268.226), stdev = 56.792
+  CI (99.9%): [198979.157, 199416.531] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInAscendingOrderCase_1000000.txt)
+
+# Run progress: 6.73% complete, ETA 3 days, 07:39:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 998670.153 ms/op
+# Warmup Iteration   2: 663969.140 ms/op
+# Warmup Iteration   3: 199288.089 ms/op
+Iteration   1: 199285.635 ms/op
+Iteration   2: 199150.917 ms/op
+Iteration   3: 199094.311 ms/op
+Iteration   4: 199351.578 ms/op
+Iteration   5: 199274.663 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199231.421 ±(99.9%) 406.269 ms/op [Average]
+  (min, avg, max) = (199094.311, 199231.421, 199351.578), stdev = 105.507
+  CI (99.9%): [198825.152, 199637.690] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/NearlySortedInDescendingOrderCase_1000000.txt)
+
+# Run progress: 6.90% complete, ETA 3 days, 16:16:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 977253.344 ms/op
+# Warmup Iteration   2: 663745.476 ms/op
+# Warmup Iteration   3: 199354.739 ms/op
+Iteration   1: 199293.592 ms/op
+Iteration   2: 199089.193 ms/op
+Iteration   3: 199247.593 ms/op
+Iteration   4: 199289.170 ms/op
+Iteration   5: 199293.352 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199242.580 ±(99.9%) 338.460 ms/op [Average]
+  (min, avg, max) = (199089.193, 199242.580, 199293.592), stdev = 87.897
+  CI (99.9%): [198904.121, 199581.040] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SameValueCase_1000000.txt)
+
+# Run progress: 7.07% complete, ETA 4 days, 00:22:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 664121.912 ms/op
+# Warmup Iteration   2: 664178.004 ms/op
+# Warmup Iteration   3: 167868.328 ms/op
+Iteration   1: 168029.456 ms/op
+Iteration   2: 168152.333 ms/op
+Iteration   3: 167974.220 ms/op
+Iteration   4: 167979.719 ms/op
+Iteration   5: 168093.835 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  168045.913 ±(99.9%) 294.606 ms/op [Average]
+  (min, avg, max) = (167974.220, 168045.913, 168152.333), stdev = 76.508
+  CI (99.9%): [167751.307, 168340.518] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/MergeSortWorstCase_1000000.txt)
+
+# Run progress: 7.24% complete, ETA 4 days, 06:17:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 763717.563 ms/op
+# Warmup Iteration   2: 664119.912 ms/op
+# Warmup Iteration   3: 199677.961 ms/op
+Iteration   1: 199220.594 ms/op
+Iteration   2: 199230.430 ms/op
+Iteration   3: 199288.083 ms/op
+Iteration   4: 199308.481 ms/op
+Iteration   5: 200391.740 ms/op
+
+
+Result "bench.BenchmarkAllSortTestCases.BubbleSort":
+  199487.866 ±(99.9%) 1950.939 ms/op [Average]
+  (min, avg, max) = (199220.594, 199487.866, 200391.740), stdev = 506.653
+  CI (99.9%): [197536.926, 201438.805] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 12, Java HotSpot(TM) 64-Bit Server VM, 12+33
+# VM invoker: C:\Program Files\Java\jdk-12\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\lib\idea_rt.jar=61037:C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.1\bin -Dfile.encoding=UTF-8
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 5 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: bench.BenchmarkAllSortTestCases.BubbleSort
+# Parameters: (fileName = testCases/SortedInAscendingOrderCase_10000000.txt)
+
+# Run progress: 7.41% complete, ETA 4 days, 12:53:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 18198533.259 ms/op
+# Warmup Iteration   2: 18193803.222 ms/op
+# Warmup Iteration   3: 
+Process finished with exit code -1
