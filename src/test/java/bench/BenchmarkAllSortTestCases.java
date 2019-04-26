@@ -95,61 +95,114 @@ public class BenchmarkAllSortTestCases {
    @Setup
    public void loadData()
    {
-
       inputArray = SharedFunctions.readFromInputFile(fileName);
    }
 
    @Benchmark
    public void BubbleSort()
    {
-      BubbleSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      BubbleSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void InsertionSort()
    {
-      InsertionSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      InsertionSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void ShellSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void TimSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void HeapSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void MergeSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void QuickSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void RadixSort()
    {
-      ShellSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      ShellSort.sortArray(tempArray);
    }
 
    @Benchmark
    public void JavaUtilArraysSort()
    {
-      JavaUtilArraysSort.sortArray(inputArray);
+      // Needed because we always want to start with the test case
+      // Without this inputArray would be sorted the first time and
+      // consecutive calls will be wrong.
+      int[] tempArray = new int[inputArray.length];
+      System.arraycopy(tempArray, 0, inputArray, 0, inputArray.length);
+
+      JavaUtilArraysSort.sortArray(tempArray);
    }
 }
